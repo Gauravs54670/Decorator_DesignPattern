@@ -26,5 +26,15 @@ public class Main {
         System.out.println("Coffee price " + (coffeePrice + decorator.getCost()) +"\n"+
                 "Coffee description " + coffeeDescription+ " " + decorator.getDescription());
 
+        Beverage bvg2 = new Coffee();
+        BeverageDecorator decorator2 = new MilkDecorator(
+                new CreamDecorator(
+                        bvg2
+                )
+        );
+        System.out.println(
+                "Coffee price " + (coffeePrice + decorator2.getCost())
+                + "\n"+ "Coffee description " + (coffeeDescription+ " " + decorator2.getDescription())
+        );
     }
 }

@@ -9,11 +9,11 @@ public class CreamDecorator extends BeverageDecorator{
 
     @Override
     public double getCost() {
-        return 50;
+        return beverage.getCost() + 50;
     }
 
     @Override
     public String getDescription() {
-        return "with Cream";
+        return beverage.getDescription() + " with Cream";
     }
 }
